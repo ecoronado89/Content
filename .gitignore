@@ -1,0 +1,12 @@
+node_modules/
+allure-results/
+allure-report/
+errorShots/
+screenshots/
+complexity_report/
+reports/
+npm-debug.log
+package-lock.json
+local.log
+*.tgz
+*.png

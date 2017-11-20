@@ -1,0 +1,24 @@
+{
+  "extends": "eslint-config-llbean",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "globalReturn": true,
+      "jsx": true
+    }
+  },
+  "rules": {
+    "comma-dangle": "off",
+    "guard-for-in" :"off",
+    "no-restricted-syntax":"off",
+    "no-unused-expressions": 0,
+    "consistent-return": 0,
+    "import/no-extraneous-dependencies": ["off", { "devDependencies": ["gulpfile.js"] }]
+  },
+  "globals": {},
+  "plugins": ["webdriverio"],
+  "env": {
+    "webdriverio/wdio": true,
+    "mocha": true
+  }
+}
