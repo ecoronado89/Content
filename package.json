@@ -22,7 +22,7 @@
     "type": "",
     "url": ""
   },
-  "author": "ANDREW EL MAS GUAPO",
+  "author": "Andrew Jose Morales Obando",
   "license": "ISC",
   "pre-commit": [
     "lint",
