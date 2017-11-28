@@ -23,6 +23,7 @@
     "url": ""
   },
   "author": "Josias Vargas /",
+  "author": "Andrew Jose Morales Obando",
   "license": "ISC",
   "pre-commit": [
     "lint",
