@@ -22,7 +22,7 @@
     "type": "",
     "url": ""
   },
-  "author": "Josias Vargas",
+  "author": "Josias Vargas /",
   "license": "ISC",
   "pre-commit": [
     "lint",
