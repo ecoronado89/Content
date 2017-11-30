@@ -31,6 +31,18 @@ exports.config = merge(wdioConf.config, {
         localIdentifier: 'web-automation-wcm-landers',
         build: 'webdriver-browserstack'
     },
+    { 
+        os: 'Windows',
+        os_version: '10',
+        browser: 'Chrome',
+       browser_version: '62.0',
+        acceptSslCerts: true,
+        'browserstack.local': true,
+        'browserstack.debug': true,
+        localIdentifier: 'web-automation-wcm-landers',
+        build: 'webdriver-browserstack'
+        
+    },
     {
         os: 'Windows',
         os_version: '10',
