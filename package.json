@@ -22,7 +22,8 @@
     "type": "",
     "url": "https://github.com/ecoronado89/Content.git"
   },
-  "author": "COE Team",
+  "author": "Josias Vargas /",
+  "author": "Andrew Jose Morales Obando",
   "license": "ISC",
   "pre-commit": [
     "lint",
