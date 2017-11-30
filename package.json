@@ -1,5 +1,5 @@
 {
-  "name": "web-automation-template",
+  "name": "cttcm-1111",
   "version": "0.1.0",
   "description": "Template repository",
   "main": "index.js",
@@ -13,14 +13,14 @@
     "test:Q13": "cross-env AUTOMATION_ENV=Q13 ./node_modules/.bin/wdio config/local-test-suite.conf.js",
     "test:FEA-Development": "cross-env AUTOMATION_ENV=FEA-Development VIEWPORT=LARGE ./node_modules/.bin/wdio config/local-test-suite.conf.js",
     "test:BS:Devices": "cross-env AUTOMATION_ENV=FEA-Development ./node_modules/.bin/wdio config/remote-test-suite-Devices.js",
-    "test:BS:Browsers": "cross-env NODE_TLS_REJECT_UNAUTHORIZED=0 AUTOMATION_ENV=FEA-Development VIEWPORT=large ./node_modules/.bin/wdio config/remote-test-suite-Browsers.js",
+    "test:BS:Browsers": "cross-env NODE_TLS_REJECT_UNAUTHORIZED=0 AUTOMATION_ENV=Stage1 VIEWPORT=large ./node_modules/.bin/wdio config/remote-test-suite-Browsers.js",
     "lint": "eslint --fix config/*.js src/pages/*.js test/*js ",
     "local": "cross-env AUTOMATION_ENV=Stage1 NODE_TLS_REJECT_UNAUTHORIZED=0 ./node_modules/.bin/wdio config/local-test-suite.conf.js",
     "complexity": "es6-plato -r -d complexity_report -t \"Complexity: header\" test"
   },
   "repository": {
     "type": "",
-    "url": ""
+    "url": "https://github.com/ecoronado89/Content.git"
   },
   "author": "COE Team",
   "license": "ISC",
@@ -56,10 +56,9 @@
     "web-automation-base": "^0.1.0",
     "web-automation-category-page": "^0.1.0",
     "web-automation-header": "latest",
-    "web-automation-selectors": "latest",
+    "web-automation-selectors": "^0.1.1",
     "webdriverio": "^4.8.0"
   },
-
   "standard": {
     "plugins": [
       "webdriverio"

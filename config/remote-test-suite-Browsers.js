@@ -8,66 +8,48 @@ exports.config = merge(wdioConf.config, {
     viewport: 'xsmall',
     specs: [
         // './test/*_test.js'
-        './test/homepage_test.js'
+        './test/cttcm-1111.js'
     ],
+    commonCapabilities: {
+        name: 'Web-Automation-Header',
+        'browserstack.localIdentifier': process.env.BROWSERSTACK_LOCAL_IDENTIFIER,
+        acceptSslCerts: true,
+        'browserstack.local': true,
+        'browserstack.debug': true,
+        build: 'WebdriverIO-Browserstack'
+    },
     capabilities: [{
         os: 'Windows',
         os_version: '7',
         browser: 'Chrome',
         browser_version: '56.0',
-        acceptSslCerts: true,
-        'browserstack.local': true,
-        'browserstack.debug': true,
-        localIdentifier: 'web-automation-wcm-landers',
-        build: 'webdriver-browserstack'
-    }, {
+    },
+    {
         os: 'Windows',
         os_version: '10',
         browser: 'Firefox',
-      //  browser_version: '47.0',
-        acceptSslCerts: true,
-        'browserstack.local': true,
-        'browserstack.debug': true,
-        localIdentifier: 'web-automation-wcm-landers',
-        build: 'webdriver-browserstack'
+        browser_version: '56.0',
     },
     {
         os: 'Windows',
         os_version: '10',
         browser: 'Edge',
         browser_version: '15.0',
-        resolution: '1024x768',
-        acceptSslCerts: true,
-        'browserstack.local': true,
-        'browserstack.debug': true,
-        localIdentifier: 'web-automation-wcm-landers',
-        build: 'webdriver-browserstack'
     },
     {
         os: 'OS X',
         os_version: 'Sierra',
         browser: 'Safari',
         browser_version: '10.1',
-        resolution: '1024x768',
-        acceptSslCerts: true,
-        'browserstack.local': true,
-        'browserstack.debug': true,
-        localIdentifier: 'web-automation-wcm-landers',
-        build: 'webdriver-browserstack'
     },
     {
         os: 'Windows',
         os_version: '10',
         browser: 'IE',
         browser_version: '11.0',
-        resolution: '1024x768',
-        acceptSslCerts: true,
-        'browserstack.local': true,
-        'browserstack.debug': true,
-        localIdentifier: 'web-automation-wcm-landers',
-        build: 'webdriver-browserstack'
     }
     ],
+
 
     beforeSuite() {
         if (process.env.VIEWPORT != null) {
@@ -75,4 +57,8 @@ exports.config = merge(wdioConf.config, {
             browser.setViewportSize({ width: viewport[0], height: viewport[1] });
         }
     }
+});
+
+exports.config.capabilities.forEach(caps => {
+    for (const i in exports.config.commonCapabilities) caps[i] = caps[i] || exports.config.commonCapabilities[i];
 });
