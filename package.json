@@ -19,11 +19,10 @@
     "complexity": "es6-plato -r -d complexity_report -t \"Complexity: header\" test"
   },
   "repository": {
-    "type": "",
+    "type": "git",
     "url": "https://github.com/ecoronado89/Content.git"
   },
-  "author": "Josias Vargas /",
-  "author": "Andrew Jose Morales Obando",
+  "author": "COE Team",
   "license": "ISC",
   "pre-commit": [
     "lint",
