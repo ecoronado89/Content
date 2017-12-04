@@ -20,12 +20,15 @@ class SalesPage {
     }
 
     isSaleTextDisplayed() {
+        browser.pause(10000);
         const list = this.saleText;
         const prodN = this.productList;
 
-        prodN.value.forEach(element => {
-            this.products.push({ productName: element.getText(this.selectors.salecategory.productName), visible: element.element(this.selectors.salecategory.saleText).isVisible() });
-        }, this);
+        for(let i  = 0; i < prodN.value.length; i += 1) {
+            this.products.push({ productName: prodN.value[i].getText(this.selectors.salecategory.productName), visible: prodN.value[i].isVisible(this.selectors.salecategory.saleText)});
+        }
+        this.products.pop();
+        console.log(this.products);
         return this.products;
     }
 }

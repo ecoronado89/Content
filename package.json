@@ -55,6 +55,7 @@
     "wdio-spec-reporter": "^0.1.0",
     "web-automation-base": "^0.1.0",
     "web-automation-category-page": "^0.1.0",
+    "web-automation-footer": "^0.1.0",
     "web-automation-header": "latest",
     "web-automation-selectors": "^0.1.1",
     "webdriverio": "^4.8.0"
