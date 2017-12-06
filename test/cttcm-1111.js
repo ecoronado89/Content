@@ -27,11 +27,11 @@ describe('CTTCM-1111', () => {
         });
         assert(passed, `There are broken thubnails:\n${str}`);
     });
- 
-    it.each(saleArray, 'Merch text on page %s', ['element'], function(element) {
+
+    it.each(saleArray, 'Merch text on page %s', ['element'], element => {
         let temp = true;
         browser.url(`llb/shop/${element}&tealium=off`);
-        browser.waitUntil(function() {
+        browser.waitUntil(() => {
             finnished = sales.isSaleTextDisplayed();
             finnished.forEach(index => {
                 if (index.visible === false) {
@@ -44,5 +44,4 @@ describe('CTTCM-1111', () => {
         });
         assert(temp, `Page ${element} - Redline pricing is not visible on:\n${str}`);
     });
-
 });

@@ -1,6 +1,4 @@
 const base = require('web-automation-base').Environments;
-const header = require('web-automation-header').Header;
-const category = require('web-automation-category-page').categoryPage;
 
 exports.config = {
 
@@ -17,7 +15,7 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './test/cttcm-1111.js'
+        './test/cttcm-1621.js'
 
     ],
     // Patterns to exclude.
