@@ -137,4 +137,45 @@ describe('CTTCM-1621', () => {
         const statusCode = footer.verifyURL('Instagram');
         assert.equal(statusCode, 200);
     });
+
+    it('Bottom Links - Mobile Site', () => {
+        const statusCode = footer.verifyURL('Mobile Site');
+        assert.equal(statusCode, 200);
+    });
+
+    it('Bottom Links - Mobile App', () => {
+        const statusCode = footer.verifyURL('Mobile App');
+        assert.equal(statusCode, 200);
+    });
+
+    it('Bottom Links - Site Map', () => {
+        const statusCode = footer.verifyURL('Site Map');
+        assert.equal(statusCode, 200);
+    });
+
+    it('Bottom Links - Security', () => {
+        const statusCode = footer.verifyURL('Security');
+        assert.equal(statusCode, 200);
+    });
+
+    it('Bottom Links - Privacy Policy', () => {
+        const statusCode = footer.verifyURL('Privacy Policy');
+        assert.equal(statusCode, 200);
+    });
+
+    it('Bottom Links - Recall & Safety Info', () => {
+        const statusCode = footer.verifyURL('Recall & Safety Info');
+        assert.equal(statusCode, 200);
+    });
+
+    it('Bottom Links - Transparency Act', () => {
+        const statusCode = footer.verifyURL('Transparency Act');
+        assert.equal(statusCode, 200);
+    });
+
+    it('Bottom Links - Paypal', () => {
+        const statusCode = footer.verifyURL('Paypal');
+        assert.equal(statusCode, 200);
+    });
+
 });
